@@ -15,7 +15,7 @@ A **QGIS cookbook** — PyQGIS automation, processing scripts, and plugin patter
 
 ## Repository role and status
 
-**Status:** Active, public — seeding. Pattern passes land in follow-up work from fleet-verified setups; the tables below list what is planned, not what is already written.
+**Status:** Active, public — first pattern pass written (design-only, gate 1 target; runtime validation pending). The tables below list the written patterns with their evidence levels.
 
 **What this repository is:** QGIS patterns — see the table below.
 
@@ -33,20 +33,24 @@ GIS developers who automate QGIS with Python.
 - Python console and PyQGIS
 - A sample project and layers
 
-## Patterns (planned)
+## Patterns
 
-| # | Example | What it will demonstrate |
-|---|---------|--------------------------|
-| 01 | `01-pyqgis-basics` | Loading layers, running processing algorithms, and writing outputs from Python |
-| 02 | `02-processing-scripts` | Writing processing scripts with parameters and outputs |
-| 03 | `03-map-automation` | Automating map exports and layouts |
-| 04 | `04-plugin-pattern` | Structuring a minimal plugin from a working script |
+| # | Example | Status | What it demonstrates |
+|---|---------|--------|----------------------|
+| 01 | [01-pyqgis-basics](examples/01-pyqgis-basics/README.md) | Written — design-only, gate 1 target | Loading layers, running processing algorithms, and writing outputs from Python |
+| 02 | [02-processing-scripts](examples/02-processing-scripts/README.md) | Written — design-only, gate 1 target | Writing processing scripts with parameters and outputs |
+| 03 | [03-map-automation](examples/03-map-automation/README.md) | Written — design-only, gate 1 target | Automating map exports and layouts |
+| 04 | [04-plugin-pattern](examples/04-plugin-pattern/README.md) | Written — design-only, gate 1 target | Structuring a minimal plugin from a working script |
 
 ## Repository layout
 
 ```text
 qgis-cookbook/
-├── examples/          # pattern passes, landing in follow-up work
+├── examples/
+│   ├── 01-pyqgis-basics/
+│   ├── 02-processing-scripts/
+│   ├── 03-map-automation/
+│   └── 04-plugin-pattern/
 ├── README.md
 └── LICENSE
 ```

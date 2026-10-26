@@ -1,0 +1,11 @@
+[general]
+name=Demo Buffer Plugin
+description=Minimal example plugin: buffers the selected point layer to a GeoPackage. Structure demo only; see the pattern README.
+version=0.1
+qgisMinimumVersion=3.0
+qgisMaximumVersion=3.99
+author=ZQM Computing
+email=zqmcomputing@gmail.com
+about=Buffers the active point layer. No credentials, no network use, no personal data.
+tracker=https://github.com/ZQM-Computing/qgis-cookbook/issues
+repository=https://github.com/ZQM-Computing/qgis-cookbook
