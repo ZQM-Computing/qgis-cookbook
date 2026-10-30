@@ -80,9 +80,10 @@ class StaticContractTests(unittest.TestCase):
     def test_all_patterns_disclose_design_only_evidence(self):
         for name in ("01-pyqgis-basics", "02-processing-scripts", "03-map-automation", "04-plugin-pattern"):
             doc = (EXAMPLES / name / "README.md").read_text(encoding="utf-8")
+            normalized = " ".join(doc.split())
             with self.subTest(pattern=name):
-                self.assertIn("Evidence: design-only, gate 1 target", doc)
-                self.assertIn("No gate 3 claim", doc)
+                self.assertIn("Evidence: design-only, gate 1 target", normalized)
+                self.assertIn("No gate 3 claim", normalized)
 
 if __name__ == "__main__":
     unittest.main()
