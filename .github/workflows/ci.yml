@@ -1,0 +1,25 @@
+name: Static validation
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qgis-cookbook-static-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Run static contract tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Compile Python examples
+        run: python3 -m compileall -q examples tests

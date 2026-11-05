@@ -15,7 +15,7 @@ A **QGIS cookbook** — PyQGIS automation, processing scripts, and plugin patter
 
 ## Repository role and status
 
-**Status:** Active, public — first pattern pass written (design-only, gate 1 target; runtime validation pending). The tables below list the written patterns with their evidence levels.
+**Status:** Active, public — four patterns are drafted at evidence gate 1 (design-only); none is runtime-validated. CI checks Python syntax, synthetic fixture structure, and documentation contracts only. It does not execute QGIS or certify the examples.
 
 **What this repository is:** QGIS patterns — see the table below.
 
@@ -57,12 +57,13 @@ qgis-cookbook/
 
 ## Roadmap
 
-- First pattern pass: the first two table rows
-- Second pass: the remaining rows, from fleet-verified setups
+- Complete gate-1 reproducibility for all four patterns: confirm paths, run instructions, synthetic fixtures, expected outputs, and failure behavior.
+- Verify the plugin metadata and Processing Toolbox steps against the installed QGIS 3.44.15 LTR build.
+- Promote patterns to gate 3 only after a recorded QGIS runtime run with output artifacts and independent feature-count / visual checks.
 
 ## Contributing
 
-A contributing guide lands with the first pattern pass. Report security issues to <zqmcomputing@gmail.com> — please do not open a public issue for those.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the example, fixture, validation, and evidence requirements. Report security issues to <zqmcomputing@gmail.com> — please do not open a public issue for those.
 
 ## More from this series
 
